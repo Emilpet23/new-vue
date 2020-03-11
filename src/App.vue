@@ -1,12 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+        <site-header></site-header>
+        <site-footer></site-footer>
+        <soda></soda>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import SiteHeader from "@/components/SiteHeader.vue";
+import SiteFooter from "@/components/SiteFooter.vue";
+import Soda from "@/components/Soda.vue";
+
+export default {
+  components: {
+    SiteHeader,
+    SiteFooter,
+    Soda
+  }
+};
+</script>
 
 <style>
 #app {
